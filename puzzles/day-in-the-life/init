@@ -1,0 +1,27 @@
+#!/bin/bash
+
+source ../../common_scripts.sh
+
+clean_up
+
+branch "master"
+commit "1"
+commit "2"
+
+branch "feature-1"
+commit "6"
+commit "7"
+push
+
+branch "master"
+commit "3"
+
+branch "feature-2"
+commit "4"
+commit "5"
+push
+
+branch "master"
+push
+
+cat INSTRUCTIONS.md

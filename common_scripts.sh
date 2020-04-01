@@ -5,9 +5,20 @@ function clean_up() {
   git init --quiet
   echo init > .gitignore
   echo INSTRUCTIONS.md >> .gitignore
+  echo "remote" >> .gitignore
   git add .gitignore
   git commit --quiet -m "initial commit";
   git clean -df --quiet
+
+  rm -rf "remote"
+  mkdir "remote"
+  # shellcheck disable=SC2164
+  pushd "remote" > /dev/null
+    git init --bare --quiet;
+  # shellcheck disable=SC2164
+  popd > /dev/null
+
+  git remote add origin "remote"
 }
 
 function commit() {
@@ -18,4 +29,8 @@ function commit() {
 
 function branch() {
   git checkout -b "$1" 2>/dev/null || git checkout --quiet "$1"
+}
+
+function push() {
+  git push --quiet origin head
 }
