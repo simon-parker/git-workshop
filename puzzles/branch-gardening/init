@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source ../../common_scripts.sh
+
+clean_up
+
+cat INSTRUCTIONS.md
