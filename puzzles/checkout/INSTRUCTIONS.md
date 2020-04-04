@@ -1,6 +1,8 @@
 # Instructions
 
-Make your `git lola` look like this:
+Visit every commit below!
+
+Try to be as efficient as you can.
 
 ```
 * 7998c6b (3) 6
@@ -14,4 +16,4 @@ Make your `git lola` look like this:
 * f5f39b4 initial commit
 ```
 
-Remember: branches get created whether `HEAD` is pointing to!
+Remember: `HEAD` points to the current commit.
