@@ -1,5 +1,16 @@
 #!/bin/bash
 
+unalias git 2> /dev/null
+
+if [ $? -eq 0 ]
+then
+  echo 'You have a bash alias for `git`'
+  echo '(possibly due to a tool like git-together)'
+  echo 'We are removing it for this session'
+  echo 'You can start a new terminal to get it back'
+  echo
+fi
+
 function clean_up() {
   rm -rf .git
   git init --quiet
