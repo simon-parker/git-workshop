@@ -4,20 +4,19 @@ source ../../common_scripts.sh
 
 clean_up
 
-branch "1"
+branch "master"
 commit "1"
 commit "2"
 
-branch "2"
+branch "1"
 commit "3"
 commit "4"
-
-branch "3"
 commit "5"
+
+branch "2"
 commit "6"
 
 branch "master"
 commit "7"
-
 
 cat INSTRUCTIONS.md
